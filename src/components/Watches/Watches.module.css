@@ -1,0 +1,7 @@
+.container {
+  width: 250px;
+  background-color: aquamarine;
+  padding: 1px auto;
+  align-items: center;
+  justify-content: center;
+}

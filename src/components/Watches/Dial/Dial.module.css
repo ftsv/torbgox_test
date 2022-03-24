@@ -1,0 +1,117 @@
+.dial {
+  width: 188px;
+  height: 188px;
+  background-color: #f6f8e3;
+  border: 2px solid #383838;
+  border-radius: 50%;
+  margin: 10px auto;
+  padding: 4px;
+}
+
+.dial-outer-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: #f6f8e3;
+  overflow: hidden;
+}
+
+.dial-outer-face::after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform:  rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.dial-outer-face::after,
+.dial-outer-face::before,
+.mark {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #383838;
+  z-index: 0;
+  left: 49%;
+}
+
+.mark-one {
+  -webkit-transform: rotate(30deg);
+  -moz-transform:  rotate(30deg);
+  transform: rotate(30deg);
+}
+
+.mark-two {
+  -webkit-transform: rotate(60deg);
+  -moz-transform:  rotate(60deg);
+  transform: rotate(60deg);
+}
+
+.mark-four {
+  -webkit-transform: rotate(1200deg);
+  -moz-transform:  rotate(120deg);
+  transform: rotate(120deg);
+}
+.mark-five {
+  -webkit-transform: rotate(150deg);
+  -moz-transform:  rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.dial-inner-face {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: #f6f8e3;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  z-index: 1;
+}
+
+.dial-inner-face::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  margin-top: -6px;
+  margin-left: -6px;
+  background-color: #a9440e;
+  z-index: 10;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 50%;
+  height: 4px;
+  border-radius: 6px;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.arrow-hour {
+  width: 44px;
+  height: 6px;
+  background-color: #4a4a4a;
+  z-index: 7;
+}
+.arrow-minute {
+  width: 76px;
+  height: 4px;
+  background-color: #4a4a4a;
+  z-index: 8;
+}
+.arrow-second {
+  width: 90px;
+  height: 2px;
+  background-color: #a9440e;
+  z-index: 11;
+}
