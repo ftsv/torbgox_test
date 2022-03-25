@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100wh;
+  margin: 0px auto;
+  height: 100vh;
+}
+
+.container-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.error,
+.loading {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.error {
+  color: #ff0000;
+}

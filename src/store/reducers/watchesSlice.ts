@@ -7,7 +7,7 @@ interface WatchesState {
     seconds: number;
   }
   local: string;
-  clocks: {timezone: string; name: string}[];
+  clocks: {id: string; timezone: string; name: string}[];
 }
 const localTimezone = (new Date()).getTimezoneOffset() / -60;
 const local = localTimezone > 0 ? `+${localTimezone}`: `-${localTimezone}`;
@@ -19,7 +19,7 @@ const initialState: WatchesState = {
     seconds: 0,
   },
   local,
-  clocks: [{timezone: local, name: 'Местное время'}],
+  clocks: [],
 }
 
 export const watchesSlice = createSlice({
@@ -34,12 +34,14 @@ export const watchesSlice = createSlice({
       state.date.seconds = now.getSeconds();
     },
     addClocks: (state, action:PayloadAction<{timezone: string; name: string}>) => {
-      state.clocks = [...state.clocks, action.payload];
+      const { timezone, name } = action.payload;
+      state.clocks = [...state.clocks, {id: Date.now().toString(), timezone, name }];
     },
     changeClocks: (state, action:PayloadAction<{timezone: string; name: string; index: number;}>) => {
       const { index, timezone, name } = action.payload;
       
-      state.clocks[index] = {timezone, name};
+      state.clocks[index].timezone = timezone;
+      state.clocks[index].name = name;
     }
   },
 });
