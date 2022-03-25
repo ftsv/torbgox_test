@@ -38,6 +38,7 @@ export const watchesSlice = createSlice({
     },
     changeClocks: (state, action:PayloadAction<{timezone: string; name: string; index: number;}>) => {
       const { index, timezone, name } = action.payload;
+      
       state.clocks[index] = {timezone, name};
     }
   },

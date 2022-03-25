@@ -1,15 +1,11 @@
 import React from 'react';
-import IDate from '../../../models/IDate';
 import { TimeProps } from '../Watches';
 
 import styles from './Digital.module.css';
 
 const Digital: React.FC<TimeProps> = (props) => {
-  const {
-    hours,
-    minutes,
-    seconds,
-  } = props;
+  const { hours, minutes, seconds } = props;
+  
   const addZeroToElement = (num: number): (number | string) => {
     return (num < 10) ? `0${num}` : num ;
   }
