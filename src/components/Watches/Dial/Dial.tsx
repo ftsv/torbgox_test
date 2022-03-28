@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import IDate from '../../../models/IDate';
+import { TimeProps } from '../Watches';
 
 import cn from 'classnames';
 import styles from './Dial.module.css';
-import { TimeProps } from '../Watches';
 
 
 const Dial: React.FC<TimeProps> = (props)=> {
@@ -29,6 +28,7 @@ const Dial: React.FC<TimeProps> = (props)=> {
 
   useEffect(() => {
     setTime();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props]);
 
   return (

@@ -1,25 +1,20 @@
 # Тестовое задание для компании Torgbox (мировое время)
-# стек React + Redux-toolkit + TypeScrypt
+# React + Redux-toolkit + TypeScrypt
 
 Проект создан с помощью [Create React App](https://github.com/facebook/create-react-app).
+Глобальный менеджер состояний Redux-Toolkit, локальные состояния управляются хуком useState
+Асинхронные запросы выполняются библиотекой RTK query
+Для типизации данных используется TypeScript
 
-## Доступные команды в консоли
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) --template typescript.
+Redux-Toolkit global state manager, local states are managed by useState hook
+Async queries are performed by RTK query
 
-В директории с проектом вы можете выполнить следующие команды:
+### команда в консоли `npm start`
 
-### `npm start`
+Запустит приложение в режиме разработки.
+Откройте [http://localhost:3000](http://localhost:3000) чтобы посмотреть в браузере.
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
